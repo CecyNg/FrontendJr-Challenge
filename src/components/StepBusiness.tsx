@@ -256,6 +256,10 @@ function StepBusiness({ businessData, setBusinessData, onNext, onBack }: StepBus
             Archivo seleccionado: {businessData.Logotipo.name}
           </p>
         )}
+         {fieldErrors.Logotipo && (
+          <p className="text-red-500 text-sm mt-1">{fieldErrors.Logotipo}</p>
+        )}
+        
         {images && (
           <img src={images} alt="Logotipo" className="mx-auto mt-2 max-h-32 object-contain" />
         )}
